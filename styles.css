@@ -1,38 +1,155 @@
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #f0f2f5;
+  color: #333;
 }
 
 header {
   background-color: #282c34;
   color: white;
+  width: 200px;
+  padding-top: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  height: auto;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  margin-bottom: 20px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  display: block;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #61dafb;
+  border-radius: 5px;
+}
+
+.content {
+  margin-left: 200px;
   padding: 20px;
+  width: calc(100% - 200px);
+  overflow-y: auto;
+}
+
+.profile {
   text-align: center;
+  margin-bottom: 40px;
+}
+
+.profile img {
+  border-radius: 50%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.profile img:hover {
+  transform: scale(1.05);
 }
 
 main {
   padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 section {
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #282c34;
+  margin-bottom: 10px;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 10px;
 }
 
 a {
-  display: block;
+  display: inline-block;
   color: #61dafb;
   text-decoration: none;
-  margin: 5px 0;
+  margin: 10px 0;
+  font-weight: 700;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #282c34;
+}
+
+#time {
+  background-color: #e0f7fa;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#current-day-section {
+  background-color: #fff3e0;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#goals {
+  background-color: #e8f5e9;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+#links {
+  background-color: #f3e5f5;
+  padding: 20px;
+  border-radius: 10px;
 }
 
 @media (max-width: 600px) {
   header {
-      padding: 10px;
+      width: 100%;
+      height: auto;
+      box-shadow: none;
+      position: relative;
   }
 
-  main {
+  nav ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+  }
+
+  nav ul li {
+      margin-bottom: 0;
+  }
+
+  .content {
+      margin-left: 0;
       padding: 10px;
+      width: 100%;
   }
 }
