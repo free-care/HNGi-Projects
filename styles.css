@@ -52,7 +52,6 @@ nav ul li a:hover {
 
 .content {
   padding: 20px;
-  padding-top: 200px;
   width: calc(100% - 200px);
   overflow-y: auto;
 }
@@ -135,7 +134,7 @@ a:hover {
 
 @media (max-width: 600px) {
   header {
-      width: auto;
+      width: 100vw;
       height: auto;
       box-shadow: none;
       position: fixed;
